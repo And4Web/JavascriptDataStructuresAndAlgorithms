@@ -6,7 +6,7 @@ function countUpDown(n) {
     console.log(i);
   }
   console.log("At the top, Now going down");
-  for (let j = n; j >= 0; j++) {
+  for (let j = n; j >= 0; j--) {
     console.log(j);
   }
   console.log("Back down. Bye");
