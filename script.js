@@ -19,7 +19,7 @@
 // // let t2 = performance.now();
 // // console.log(addUpTo2(5), ", ", t2);
 
-//function to count up and down:
+//problem2: function to count up and down:
 
 // function countUpAndDown(n) {
 //   console.log("Going Up!");
@@ -34,7 +34,7 @@
 // }
 // countUpAndDown(30);
 
-//// function to print pairs:
+////problem3: function to print pairs:
 
 // function printAllPairs(n) {
 //   for (let i = 0; i <= n; i++) {
@@ -45,7 +45,7 @@
 // }
 // printAllPairs(1);
 
-// function to log at least upto 5:
+//problem4: function to log at least upto 5:
 
 // function logAtLeast5(n) {
 //   for (let i = 1; i <= Math.max(5, n); i++) {
@@ -54,7 +54,7 @@
 // }
 // logAtLeast5(2);
 
-// function to log upto 10 atmost:
+//problem5: function to log upto 10 atmost:
 
 // function logAtMost10(n) {
 //   for (let i = 1; i <= Math.min(10, n); i++) {
