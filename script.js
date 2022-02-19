@@ -21,18 +21,18 @@
 
 //function to count up and down:
 
-function countUpAndDown(n) {
-  console.log("Going Up!");
-  for (let i = 0; i <= n; i++) {
-    console.log(i);
-  }
-  console.log("At the top, Now going down");
-  for (let j = n; j >= 0; j--) {
-    console.log(j);
-  }
-  console.log("Back down. Bye");
-}
-countUpAndDown(30);
+// function countUpAndDown(n) {
+//   console.log("Going Up!");
+//   for (let i = 0; i <= n; i++) {
+//     console.log(i);
+//   }
+//   console.log("At the top, Now going down");
+//   for (let j = n; j >= 0; j--) {
+//     console.log(j);
+//   }
+//   console.log("Back down. Bye");
+// }
+// countUpAndDown(30);
 
 //// function to print pairs:
 
@@ -44,3 +44,21 @@ countUpAndDown(30);
 //   }
 // }
 // printAllPairs(1);
+
+// function to log at least upto 5:
+
+// function logAtLeast5(n) {
+//   for (let i = 1; i <= Math.max(5, n); i++) {
+//     console.log(i);
+//   }
+// }
+// logAtLeast5(2);
+
+// function to log upto 10 atmost:
+
+// function logAtMost10(n) {
+//   for (let i = 1; i <= Math.min(10, n); i++) {
+//     console.log(i);
+//   }
+// }
+// logAtMost10(11);
