@@ -91,8 +91,29 @@
 
 // function which takes two numbers and returns sum of them
 
-function sumOf2(num1, num2) {
-  let sum = num1 + num2;
-  return sum;
+// function sumOf2(num1, num2) {
+//   let sum = num1 + num2;
+//   return sum;
+// }
+// console.log(sumOf2(14539, 729));
+
+// function which takes in a string and returns the counts of each character in the string:
+
+function charCount(str) {
+  var charObj = {};
+
+  for (let i = 0; i < str.length; i++) {
+    var char = str[i].toLowerCase();
+
+    if (charObj[char] > 0) {
+      charObj[char]++;
+    } else {
+      charObj[char] = 1;
+    }
+  }
+  return charObj;
 }
-console.log(sumOf2(14539, 729));
+
+console.log(
+  charCount("Hello there this is Anand and I am here to rock today.")
+);
