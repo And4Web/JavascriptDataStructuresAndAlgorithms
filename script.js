@@ -99,21 +99,39 @@
 
 // function which takes in a string and returns the counts of each character in the string:
 
-function charCount(str) {
-  var charObj = {};
+// function charCount(str) {
+//   var charObj = {};
 
-  for (let i = 0; i < str.length; i++) {
-    var char = str[i].toLowerCase();
+//   for (let i = 0; i < str.length; i++) {
+//     var char = str[i].toLowerCase();
 
-    if (charObj[char] > 0) {
-      charObj[char]++;
-    } else {
-      charObj[char] = 1;
+//     if (charObj[char] > 0) {
+//       charObj[char]++;
+//     } else {
+//       charObj[char] = 1;
+//     }
+//   }
+//   return charObj;
+// }
+
+// console.log(charCount("Hello there! I am Anand and I am here to rock today."));
+
+// solution 2: using RegEx and for-of:
+
+function charCount2(str) {
+  let obj = {};
+  for (let char of str) {
+    char = char.toLowerCase();
+    if (/[a-z0-9].test(char)/) {
+      if (obj[char] > 0) {
+        obj[char]++;
+      } else {
+        obj[char] = 1;
+      }
     }
   }
-  return charObj;
+  return obj;
 }
-
 console.log(
-  charCount("Hello there this is Anand and I am here to rock today.")
+  charCount2("Hello there! this is Anand and I'm here to rule the world...")
 );
