@@ -78,13 +78,21 @@
 
 //problem7: function to double each element of an array:
 
-const arr1 = [1, 2, 3, 4];
+// const arr1 = [1, 2, 3, 4];
 
-function doubleArr(arr) {
-  let arr2 = [];
-  for (let i = 0; i < arr.length; i++) {
-    arr2.push(2 * arr[i]);
-  }
-  return arr2;
+// function doubleArr(arr) {
+//   let arr2 = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     arr2.push(2 * arr[i]);
+//   }
+//   return arr2;
+// }
+// console.log(doubleArr(arr1));
+
+// function which takes two numbers and returns sum of them
+
+function sumOf2(num1, num2) {
+  let sum = num1 + num2;
+  return sum;
 }
-console.log(doubleArr(arr1));
+console.log(sumOf2(14539, 729));
