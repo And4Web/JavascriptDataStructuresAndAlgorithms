@@ -35,3 +35,31 @@ function charCount2(str) {
   return obj;
 }
 console.log(charCount2("Anand"));
+
+// solution 3: using RegEx and for-of and removing if-else statement:
+
+function charCount2(str) {
+  let obj = {};
+  for (let char of str) {
+    char = char.toLowerCase();
+    if (/[a-z0-9].test(char)/) {
+      obj[char] = ++obj[char] || 1;
+    }
+  }
+  return obj;
+}
+console.log(charCount2("Anand"));
+
+// solution 4: using RegEx and for-of and ternary operator:
+
+function charCount2(str) {
+  let obj = {};
+  for (let char of str) {
+    char = char.toLowerCase();
+    if (/[a-z0-9].test(char)/) {
+      obj[char] > 0 ? obj[char]++ : (obj[char] = 1);
+    }
+  }
+  return obj;
+}
+console.log(charCount2("Anand"));
