@@ -37,18 +37,18 @@ class LinkedList {
       this.head = this.head.next;
     }
 
-    const currentNode = this.head;
-    console.log("currentNode:", currentNode);
+    let currentNode = this.head;
 
     while (currentNode.next) {
       if (currentNode.next.value === value) {
-        currentNode.next === currentNode.next.next;
+        currentNode.next = currentNode.next.next;
       } else {
         currentNode = currentNode.next;
       }
     }
 
     console.log("currentNode before tail check: ", currentNode);
+
     if (this.tail.value === value) {
       this.tail = currentNode;
     }
@@ -80,7 +80,6 @@ linkedList1.prepend("prepended");
 
 console.log("First List: ", linkedList1.toArray());
 
-linkedList1.delete(1);
 linkedList1.delete("Harry");
 linkedList1.delete(3939696);
 linkedList1.delete("prepended");
