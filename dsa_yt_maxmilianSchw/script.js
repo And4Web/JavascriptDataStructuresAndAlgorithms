@@ -28,6 +28,32 @@ class LinkedList {
     }
   }
 
+  delete(value) {
+    if (!this.head) {
+      return;
+    }
+
+    while (this.head && this.head.value === value) {
+      this.head = this.head.next;
+    }
+
+    const currentNode = this.head;
+    console.log("currentNode:", currentNode);
+
+    while (currentNode.next) {
+      if (currentNode.next.value === value) {
+        currentNode.next === currentNode.next.next;
+      } else {
+        currentNode = currentNode.next;
+      }
+    }
+
+    console.log("currentNode before tail check: ", currentNode);
+    if (this.tail.value === value) {
+      this.tail = currentNode;
+    }
+  }
+
   toArray() {
     const elements = [];
 
@@ -46,8 +72,17 @@ let linkedList1 = new LinkedList();
 
 linkedList1.append(1);
 linkedList1.append("Harry");
+linkedList1.append("Harry");
 linkedList1.append(true);
 linkedList1.append(34.5);
+linkedList1.append(3939696);
 linkedList1.prepend("prepended");
 
-console.log(linkedList1.toArray());
+console.log("First List: ", linkedList1.toArray());
+
+linkedList1.delete(1);
+linkedList1.delete("Harry");
+linkedList1.delete(3939696);
+linkedList1.delete("prepended");
+
+console.log("List after Deletion: ", linkedList1.toArray());
